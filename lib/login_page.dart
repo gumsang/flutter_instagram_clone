@@ -31,11 +31,11 @@ class LoginPage extends StatelessWidget {
               Buttons.Google,
               onPressed: () {
                 _handleSignIn().then(
-                  (user) {
+                  (UserCredential userCredential) {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => TabPage(user),
+                        builder: (context) => TabPage(userCredential.user!),
                       ),
                     );
                   },
