@@ -5,8 +5,9 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class AccountPage extends StatefulWidget {
-  const AccountPage({Key? key}) : super(key: key);
+  const AccountPage(this.user, {Key? key}) : super(key: key);
 
+  final User user;
   @override
   State<AccountPage> createState() => _AccountPageState();
 }
@@ -46,12 +47,11 @@ class _AccountPageState extends State<AccountPage> {
             children: [
               Stack(
                 children: [
-                  const SizedBox(
+                  SizedBox(
                     width: 80,
                     height: 80,
                     child: CircleAvatar(
-                      backgroundImage: NetworkImage(
-                          'https://mblogthumb-phinf.pstatic.net/MjAyMDAyMDdfMTYw/MDAxNTgxMDg1NzUxMTUy.eV1iEw2gk2wt_YqPWe5F7SroOCkXJy2KFwmTDNzM0GQg.Z3Kd5MrDh07j86Vlb2OhAtcw0oVmGCMXtTDjoHyem9og.JPEG.7wayjeju/배우프로필사진_IMG7117.jpg?type=w800'),
+                      backgroundImage: NetworkImage(widget.user.photoURL!),
                     ),
                   ),
                   Container(

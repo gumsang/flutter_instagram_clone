@@ -10,8 +10,10 @@ class RootPage extends StatelessWidget {
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, AsyncSnapshot<User?> snapshot) {
         if (snapshot.hasData) {
+          print(snapshot.hasData);
           return TabPage(snapshot.data!);
         } else {
+          print(snapshot.hasData);
           return LoginPage();
         }
       },
