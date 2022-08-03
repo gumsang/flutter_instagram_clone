@@ -63,8 +63,10 @@ class DefaultFirebaseOptions {
     messagingSenderId: '114431785870',
     projectId: 'instagram-clone-35052',
     storageBucket: 'instagram-clone-35052.appspot.com',
-    androidClientId: '114431785870-67gnbhhp9rk1acladljimci91qt7e5vd.apps.googleusercontent.com',
-    iosClientId: '114431785870-rnjp1rlm6e6nelucuh233rbm7f0bv77a.apps.googleusercontent.com',
+    androidClientId:
+        '114431785870-67gnbhhp9rk1acladljimci91qt7e5vd.apps.googleusercontent.com',
+    iosClientId:
+        '114431785870-rnjp1rlm6e6nelucuh233rbm7f0bv77a.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterInstagramClone',
   );
 }

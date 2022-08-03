@@ -29,7 +29,7 @@ class _AccountPageState extends State<AccountPage> {
             FirebaseAuth.instance.signOut();
             _googleSignIn.signOut();
           },
-          icon: Icon(Icons.exit_to_app),
+          icon: const Icon(Icons.exit_to_app),
         )
       ],
     );
@@ -37,7 +37,7 @@ class _AccountPageState extends State<AccountPage> {
 
   _buildBody() {
     return Padding(
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,7 +46,7 @@ class _AccountPageState extends State<AccountPage> {
             children: [
               Stack(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 80,
                     height: 80,
                     child: CircleAvatar(
@@ -75,7 +75,7 @@ class _AccountPageState extends State<AccountPage> {
                           child: FloatingActionButton(
                             onPressed: () {},
                             backgroundColor: Colors.blue,
-                            child: Icon(Icons.add),
+                            child: const Icon(Icons.add),
                           ),
                         ),
                       ],
@@ -83,10 +83,10 @@ class _AccountPageState extends State<AccountPage> {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
-              Text(
+              const Text(
                 '이름',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -95,17 +95,17 @@ class _AccountPageState extends State<AccountPage> {
               ),
             ],
           ),
-          Text(
+          const Text(
             '0\n게시물',
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 18.0),
           ),
-          Text(
+          const Text(
             '0\n팔로워',
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 18.0),
           ),
-          Text(
+          const Text(
             '0\n팔로잉',
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 18.0),

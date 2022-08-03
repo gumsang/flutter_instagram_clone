@@ -32,12 +32,13 @@ class LoginPage extends StatelessWidget {
               onPressed: () {
                 _handleSignIn().then(
                   (UserCredential userCredential) {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => TabPage(userCredential.user!),
                       ),
                     );
+                    // print(userCredential);
                   },
                 );
               },

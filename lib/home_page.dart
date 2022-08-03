@@ -29,13 +29,13 @@ class HomePage extends StatelessWidget {
           child: Center(
             child: Column(
               children: [
-                Text(
+                const Text(
                   'Instagram에 오신 것을 환영합니다',
                   style: TextStyle(fontSize: 24),
                 ),
-                SizedBox(height: 8),
-                Text('사진과 동영상을 보려면 팔로우하세요'),
-                SizedBox(height: 16),
+                const SizedBox(height: 8),
+                const Text('사진과 동영상을 보려면 팔로우하세요'),
+                const SizedBox(height: 16),
                 SizedBox(
                   width: 300,
                   child: Card(
@@ -44,14 +44,14 @@ class HomePage extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: [
-                          CircleAvatar(
+                          const CircleAvatar(
                             backgroundImage: NetworkImage(
                                 'https://d2v80xjmx68n4w.cloudfront.net/gigs/JaqkS1637331647.jpg'),
                           ),
-                          SizedBox(height: 8),
-                          Text('이메일 주소'),
-                          Text('이름'),
-                          SizedBox(height: 8),
+                          const SizedBox(height: 8),
+                          const Text('이메일 주소'),
+                          const Text('이름'),
+                          const SizedBox(height: 8),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
                                   fit: BoxFit.cover,
                                 ),
                               ),
-                              SizedBox(width: 2),
+                              const SizedBox(width: 2),
                               SizedBox(
                                 width: 80,
                                 height: 80,
@@ -72,7 +72,7 @@ class HomePage extends StatelessWidget {
                                   fit: BoxFit.cover,
                                 ),
                               ),
-                              SizedBox(width: 2),
+                              const SizedBox(width: 2),
                               SizedBox(
                                 width: 80,
                                 height: 80,
@@ -85,7 +85,7 @@ class HomePage extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {},
-                            child: Text('팔로우'),
+                            child: const Text('팔로우'),
                           )
                         ],
                       ),

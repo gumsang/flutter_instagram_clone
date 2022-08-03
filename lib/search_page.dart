@@ -14,14 +14,14 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Search Page"),
+        title: const Text("Search Page"),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => CreatePage()));
         },
-        child: Icon(Icons.create),
+        child: const Icon(Icons.create),
       ),
       body: _buildBody(),
     );
@@ -29,7 +29,7 @@ class _SearchPageState extends State<SearchPage> {
 
   _buildBody() {
     return GridView.builder(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
         childAspectRatio: 1.0,
         mainAxisExtent: 1.0,

@@ -6,8 +6,9 @@ import 'package:flutter_instagram_clone/tab_page.dart';
 class RootPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<UserCredential>(
-      builder: (context, snapshot) {
+    return StreamBuilder(
+      stream: FirebaseAuth.instance.authStateChanges(),
+      builder: (context, AsyncSnapshot<User?> snapshot) {
         if (snapshot.hasData) {
           return TabPage(snapshot.data!);
         } else {

@@ -30,7 +30,7 @@ class _CreatePageState extends State<CreatePage> {
         onPressed: () {
           _getImage();
         },
-        child: Icon(Icons.add_a_photo),
+        child: const Icon(Icons.add_a_photo),
       ),
     );
   }
@@ -40,7 +40,7 @@ class _CreatePageState extends State<CreatePage> {
       actions: [
         IconButton(
           onPressed: () {},
-          icon: Icon(Icons.send),
+          icon: const Icon(Icons.send),
         )
       ],
     );
@@ -50,10 +50,10 @@ class _CreatePageState extends State<CreatePage> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          _image == null ? Text('No Image') : Image.file(_image!),
+          _image == null ? const Text('No Image') : Image.file(_image!),
           TextField(
             controller: textEditingController,
-            decoration: InputDecoration(hintText: '내용을 입력하세요'),
+            decoration: const InputDecoration(hintText: '내용을 입력하세요'),
           )
         ],
       ),

@@ -8,7 +8,7 @@ import 'search_page.dart';
 class TabPage extends StatefulWidget {
   const TabPage(this.user, {Key? key}) : super(key: key);
 
-  final UserCredential user;
+  final User user;
 
   @override
   State<TabPage> createState() => _TabPageState();
