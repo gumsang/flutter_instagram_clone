@@ -1,7 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class AccountPage extends StatefulWidget {
@@ -26,9 +25,9 @@ class _AccountPageState extends State<AccountPage> {
     return AppBar(
       actions: [
         IconButton(
-          onPressed: () {
-            FirebaseAuth.instance.signOut();
-            _googleSignIn.signOut();
+          onPressed: () async {
+            await _googleSignIn.signOut();
+            await FirebaseAuth.instance.signOut();
           },
           icon: const Icon(Icons.exit_to_app),
         )
@@ -86,9 +85,9 @@ class _AccountPageState extends State<AccountPage> {
               const SizedBox(
                 height: 8,
               ),
-              const Text(
-                '이름',
-                style: TextStyle(
+              Text(
+                widget.user.displayName!,
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18.0,
                 ),
